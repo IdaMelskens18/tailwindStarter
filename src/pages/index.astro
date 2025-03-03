@@ -4,14 +4,70 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
+import kodak from "../assets/images/kodak.jpg";
+import kodakNu from "../assets/images/110_kodak.jpg";
+import kodak_gul from "../assets/images/kodak_gul.jpg";
 ---
 
-<MainLayout title="Titel">
-  <article>
-    <h1>Index overskrift</h1>
-    <Button>Klik!</Button>
-    <p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-    <Image src={thumbsup} alt="" />
-  </article>
-  <p>hej</p>
+<MainLayout title="110-filmen">
+  <section class="bg-amber-400">
+    <div class="text-5xl">
+      <h1 class="place-self-center">KODAK 110-FILMEN</h1>
+      <h2 class="place-self-center mt-10 mb-10">EN FILM DER IKKE ER GLEMT</h2>
+    </div>
+    <div>
+      <Image src={kodak} alt="kodak" class="lg:w-[60%] w-[100%] place-self-center" />
+    </div>
+  </section>
+
+  <section class="bg-amber-300">
+    <div class="place-self-center">
+      <div class="m-50 mt-40">
+        <p class="text-center text-2xl mr-30 ml-30">
+          110-filmen fra Kodak blev et hit 110-film blev introduceret af Kodak i 1972 og blev hurtigt populært blandt hobbyfotografer og familier. Som et kompakt og brugervenligt filmformat til
+          lommekameraer. Filmen kom i en lille kassette, hvilket gjorde det nemt at indsætte og skifte uden at skulle rulle filmen manuelt. Formatet blev hurtigt populært til hverdagsfotografering,
+          men billedkvaliteten var begrænset sammenlignet med større filmformater som 35mm.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="grid grid-cols-2 bg-amber-200">
+    <div class="ml-10">
+      <h3 class="text-5xl">Fordele ved 110-filmen</h3>
+      <p class="text-2xl">
+        Kameraer som Kodak Pocket Instamatic blev populære til rejser og hverdagsbrug. Billederne er 13×17 mm, hvilket er mindre end 35mm-film, hvilket giver en mere kornet kvalitet, især ved
+        forstørrelser. Hver film har bagpapir med nummerering, hvilket gør det nemt at se, hvor mange billeder der er taget.
+      </p>
+    </div>
+    <div>
+      <Image src={kodakNu} alt="kodak" class="lg:w-[60%] w-[100%] place-self-center" />
+    </div>
+  </section>
+
+  <section>
+    <div class="bg-amber-100">
+      <h3 class="text-5xl place-self-center mt-50">Ulemper ved 110-filmen</h3>
+      <p class="text-2xl m-60 mt-20">
+        Ulempen ved 110-filmen var at den lille negativstørrelse gav mere kornede billeder sammenlignet med 35mm-film. 35mm-kompaktkameraer blev mindre og billigere med bedre linser, og det gjorde at
+        i slutningen af 90’erne blev digitale kameraer mere almindelige, hvilket skubbede filmkameraer ud af markedet.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="grid lg:grid-cols-2">
+      <div>
+        <Image src={kodak_gul} alt="kodak" class="lg:w-[65%] w-[100%] place-self-center ml-40" />
+      </div>
+      <div class="mr-50">
+        <h3 class="text-5xl mt-40">110-filmen fra Kodak fik et fald</h3>
+        <p class="text-2xl mt-10">
+          Kodak stopppede produktionen af 110-filmen i 2009, men formatet fik en lille niche-genopblomstring i 2010’erne blandt analog-fotoentusiaster. Selvom 110-film aldrig blev mainstream igen,
+          lever det videre i lommekamera-samlerkredse og retro-foto-miljøer. Hjemmesider som Lomography tilbyder et udvalg af 110-film, herunder farvenegativ, sort/hvid og redscale-varianter stadig
+          den dag i dag i 2025.
+        </p>
+      </div>
+    </div>
+  </section>
 </MainLayout>
